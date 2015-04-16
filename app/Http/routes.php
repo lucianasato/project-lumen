@@ -14,3 +14,15 @@
 $app->get('/', function() use ($app) {
     return $app->welcome();
 });
+
+$app->get('/hello', function() {
+    return 'Helloooo';
+});
+
+$app->get('user/{id}', function($id) {
+    return 'User '.$id;
+});
+
+$app->get('user/{name:[A-Za-z]+}', function($name) {
+    //
+});
