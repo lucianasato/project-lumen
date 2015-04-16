@@ -19,10 +19,9 @@ $app->get('/hello', function() {
     return 'Helloooo';
 });
 
-$app->get('user/{id}', function($id) {
-    return 'User '.$id;
-});
+$app->get('user/{id}', 'App\Http\Controllers\UserController@showProfile');
 
 $app->get('user/{name:[A-Za-z]+}', function($name) {
     //
 });
+
